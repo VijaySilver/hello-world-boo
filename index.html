@@ -44,11 +44,11 @@ driver data, which would turn out to be useful for the organization.
 <table border="1">
 <tr>
 <th>Enter Emp ID: </th>
-<th><input type="text" name="workerempid" required="required" /></th>
+<th><input type="text" name="workerempid" id="workerempid" required="required" /></th>
 </tr>
 <tr>
 <th>Enter password:</th>
-<th><input type="password" name="workerpassw" required="required" /></th>
+<th><input type="password" name="workerpassw" id="workerpassw" required="required" /></th>
 </tr>
 <tr><th>Click -></th>
 <th><input type="submit" value="Login"/></th></tr>
@@ -56,3 +56,15 @@ driver data, which would turn out to be useful for the organization.
 </form>
 </body>
 </html>
+<script>
+function login() {
+  const user = document.getElementById("workerempid").value;
+  const pass = document.getElementById("workerpassw").value;
+
+  if (user === "admin" && pass === "1234") {
+    window.location.href = "home.html";
+  } else {
+    alert("Invalid credentials");
+  }
+}
+</script>
